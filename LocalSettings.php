@@ -62,10 +62,10 @@ $wgEmailAuthentication = false;
 
 ## Database settings
 $wgDBtype           = "mysql";
-$wgDBserver         = "172.17.0.2";
-$wgDBname           = "wiki";
-$wgDBuser           = "wiki";
-$wgDBpassword       = "74iueRb5Fw8cDd";
+$wgDBserver         = getenv("MARIADB_SERVICE_HOST");
+$wgDBname           = "wikidb";
+$wgDBuser           = getenv("MARIADB_USER");
+$wgDBpassword       = getenv("MARIADB_PASSWORD");
 
 # MySQL specific settings
 $wgDBprefix         = "mw_";
