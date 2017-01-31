@@ -3,6 +3,9 @@ RewriteBase /
 
 Deny from all
 Allow from 80.243.160.0
+Allow from 10.0.0.0/8
+Allow from 172.0.0.0/8
+Allow from 192.168.0.0/16
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
