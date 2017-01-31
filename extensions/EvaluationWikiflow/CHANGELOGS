@@ -1,0 +1,32 @@
+0.3
+- Added a select input to the Assign review special page for reviewers.
+- Modified constants for permissions: EW_GRANT_ASK becomes EW_ACTION_ASK:
+	- EW_ACTION_ASK
+	- EW_ACTION_MAKE
+	- EW_ACTION_ASSIGN
+	- EW_ACTION_CERTIFY
+- Added email notifications:
+	- added new global flags:
+		- $ewgNotifyAllContributors (default false);
+		- $ewgNotifyAllReviewers  (default false);
+		- $ewgNotifyAllManagers (default false);
+	- added global variable:
+		- $ewgNotifyGroups (array): example $ewgNotifyGroups[EW_ACTION_ASK]='bureaucrat'
+- Created file EW_Constants.in and EW_Init.inc, included by EW_Settings.php, the file to be included in the LocalSettings.php now is EW_Settings.php instead of EW_Init.php (that has been deleted)
+- Re-organized info tables at 'evaluation tabs'
+- Added Evaluation trace to the evaluation tab
+- 'Review about' is now a special property of the wiki
+- Removed variable $ewgCategories: categories to evaluate are automatically detected
+- Added DB_MASTER / DB_SLAVE variables to wfGetDB (hopely) all functions.
+- Function
+	$article->loadLastEdit(); 
+Seems this does not work anymore (on MW 1.15alpha (r45889)), I substituted with 
+	$article->fetchContent();
+- Message strings were missing... added.
+- Changed appearance of the evaluation's action buttons
+- 'Form for reviws' is now a special property of the wiki, and 'Category to evaluate' is every Category with the 'Form for review' property assigned
+
+0.2
+- Renamed base directory from EvalWF to EvaluationWikiflow
+- Reviews page name creation with incremental instead of timestamp
+- Some minor bugs fixed

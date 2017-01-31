@@ -1,0 +1,9 @@
+TODO:
+- Define method for reviews' generaed name (DATETIME | INCREMENTAL)
+- User-friendly notifications
+- E-mail notifications
+- RecentReviews special page
+- Full semantic integration between evaluation workflow data and smw
+- Add profiling code wfProfileIn('PLACE (EW)'); wfProfileOut('PLACE (EW)');
+- Check the correct installation of the extension,
+ 	if it is not do not enable it (or send message)

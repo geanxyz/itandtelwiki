@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2009 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+-->
+<Templates imagesBasePath="fck_template/images/">
+	<Template title="Dokumenteninformationen" image="template1.gif">
+		<Description>Fuegt eine Tabelle mit den Dokumenteninformationen ein</Description>
+		<Html>
+			<![CDATA[
+<h1> Dokumentinfos </h1>
+<table border="1" cellpadding="1" cellspacing="1" width="100%">
+  <tbody>
+      <tr>
+            <td width="30%"> Eigent&uuml;mer: KZ / it&amp;tel </td>
+                  <td> Dokumentart: </td>
+                      </tr>
+                          <tr>
+                                <td> Datum Pr&uuml;fung: TT.MM.JJJJ </td>
+                                      <td> Dokumenttitel: </td>
+                                          </tr>
+                                              <tr>
+                                                    <td> Datum Freigabe: TT.MM.JJJJ </td>
+                                                          <td> Datenklassifikation:&nbsp;(Offen, Unternehmen, Eingeschr&auml;nkt, Vertraulich) </td>
+                                                              </tr>
+                                                                  <tr>
+                                                                        <td> G&uuml;ltige Version: 1.0.a </td>
+                                                                              <td> E-Werk Wels AG - it&amp;tel - Bahnhofplatz 4 - A-4600 Wels </td>
+                                                                                  </tr>
+                                                                                    </tbody>
+                                                                                    </table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="Aenderungsverlauf" image="template1.gif">
+		<Description>Fuegt eine Tabelle mit dem Aenderungsverlauf ein</Description>
+		<Html>
+			<![CDATA[
+			<h1> Versionsverlauf </h1>
+			<table border="1" cellpadding="1" cellspacing="1" width="100%">
+			<tbody>
+			<tr>
+				<td width="15%">Version</td>
+				<td> Bemerkung</td>
+				<td width="10%">Bearbeiter</td>
+				<td width="10%">G&uuml;ltig ab</td>
+			</tr>
+			<tr>
+				<td>1.0.a (DRAFT)</td>
+				<td>xxx</td>
+				<td>KZ</td>
+                                <td>TT.MM.JJJJ</td>
+			</tr>
+                        </tbody>
+                        </table>
+			]]>
+		</Html>
+	</Template>
+	<Template title="InBearbeitung" image="template1.gif">
+		<Description>Fuegt einen Marker fuer den Bearbeitungshinweis ein (Am Anfang der Seite)</Description>
+		<Html>
+			<![CDATA[
+			{{Bearbeitung}}
+			]]>
+		</Html>
+	</Template>
+</Templates>

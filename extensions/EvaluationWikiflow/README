@@ -1,0 +1,34 @@
+EVALUATION WIKIFLOW
+
+INSTALLATION INSTRUCTIONS
+- Put this directory in the extensions directory
+- Add require_once("extensions/EvaluationWikiflow/includes/EW_Settings.php") to your LocalSettings.php file 
+- launch the sql stored in /db directory to create tables
+- Create Review Template as you like
+	add in it the function {{#reviewabout:{{{About page|}}}|}}
+- Define Review Form as you like
+	add 'reviewaboutpage' custom input type like in this example:
+	{{{begin template|Review}}}
+	...
+	{{{field|About page|input type=reviewaboutpage|}}}
+	...
+	{{{end template}}}
+	(The property name MUST be the same passed to the #reviewabout function in the template)
+	(do this only in the form that will creates the review article, if you want to edit it you have to make a different form)
+- Setting 'Form for reviews' property in Category's page
+
+SEMANTIC INTEGRATION
+- Automatic categorization of article's
+- Evaluation input types:
+	- reviewaboutpage
+	- reviewer (hidens)
+	- reviewaboutrevision
+
+OTHER CONFIGURATION SETTINGS
+	Mail notifications:
+	- global flags:
+		- $ewgNotifyAllContributors (default false); Send mail to all contributors of an article
+		- $ewgNotifyAllReviewers  (default false); Send mail to all reviewers of an article
+		- $ewgNotifyAllManagers (default false); Send mail to all the people with the right EW_ACTION_ASSIGN
+	- global variable:
+		- $ewgNotifyGroups (array): example $ewgNotifyGroups[EW_ACTION_ASK]='bureaucrat'

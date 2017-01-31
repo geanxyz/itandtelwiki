@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+.ewForm{
+	display:inline;
+}
+.ewForm button{
+	width:120px;
+}
+.ewtable{
+	border: 1px solid #aaa;
+	width: 99%;
+	border-collapse: collapse;
+}
+.ewtable th{
+	text-align:left;
+	background-color: #efefef;
+	border:1px solid #aaa;
+}
+.ewtable td{
+	text-align:left;
+	border:1px solid #aaa;
+}
