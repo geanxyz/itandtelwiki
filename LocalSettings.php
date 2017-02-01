@@ -212,7 +212,7 @@ $wgGroupPermissions['*']['wysiwyg']=true; // for all users
 //include_once("$IP/extensions/SemanticForms/includes/SF_Settings.php");
 //require_once("$IP/extensions/EvaluationWikiflow/includes/EW_Settings.php");
 //require_once("$IP/extensions/ParserFunctions/StringFunction.php");
-array_push($wgUrlProtocols, "file:");
+array_push($wgUrlProtocols, "file://");
 //include_once('extensions/FlaggedRevs/FlaggedRevs.php');
 require_once("extensions/NiceCategoryList.php");
 // 30.1.  require_once("extensions/EditPageMultipleInputTextAreas.php");
