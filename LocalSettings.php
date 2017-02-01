@@ -226,7 +226,7 @@ require_once("extensions/NiceCategoryList.php");
 //$wgShowExceptionDetails = true;
 
 $wgFileExtensions = array('png', 'jpg', 'jpeg', 'ppt', 'ogg', 'odt', 'pdf', 'doc', 'xls', 'docx', 'xlsx', 'dot', 'dotx', 'bmp', 'tiff', 't3x', 'zip', 'rar');
-$wgMaxUploadSize = '100M';
+$wgMaxUploadSize = '104857600';
 $wgUploadSizeWarning = false;
 
 $wgEnableMWSuggest = true;
