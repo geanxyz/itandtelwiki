@@ -1,11 +1,15 @@
 RewriteEngine On
 RewriteBase /
 
+# only allow our nets
 Deny from all
-Allow from 80.243.160.0
-Allow from 10.0.0.0/8
-Allow from 172.0.0.0/8
-Allow from 192.168.0.0/16
+Order deny,allow
+
+SetEnvIf X-Forwarded-For "10.5." AllowThisNet
+SetEnvIf X-Forwarded-For "10.9.1." AllowThisNet
+SetEnvIf X-Forwarded-For "172.31." AllowThisNet
+Allow from env=AllowThisNet
+
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
