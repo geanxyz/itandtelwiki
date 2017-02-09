@@ -7,7 +7,9 @@ Order deny,allow
 
 SetEnvIf X-Forwarded-For "10.5." AllowThisNet
 SetEnvIf X-Forwarded-For "10.9.1." AllowThisNet
-SetEnvIf X-Forwarded-For "172.31." AllowThisNet
+SetEnvIf X-Forwarded-For "172.31.30." AllowThisNet
+SetEnvIf X-Forwarded-For "172.31.31." AllowThisNet
+
 Allow from env=AllowThisNet
 
 RewriteCond %{REQUEST_FILENAME} !-f
