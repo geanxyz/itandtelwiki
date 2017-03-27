@@ -9,6 +9,8 @@ SetEnvIf X-Forwarded-For "10.5." AllowThisNet
 SetEnvIf X-Forwarded-For "10.9.1." AllowThisNet
 SetEnvIf X-Forwarded-For "172.31.30." AllowThisNet
 SetEnvIf X-Forwarded-For "172.31.31." AllowThisNet
+# enagios02.itandtel.at
+SetEnvIf X-Forwarded-For "86.56.128.194" AllowThisNet
 
 Allow from env=AllowThisNet
 
